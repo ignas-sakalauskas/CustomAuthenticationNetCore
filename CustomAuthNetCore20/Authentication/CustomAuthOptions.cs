@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.Extensions.Primitives;
 
 namespace CustomAuthNetCore20.Authentication
 {
@@ -6,6 +7,6 @@ namespace CustomAuthNetCore20.Authentication
     {
         public const string DefaultScheme = "custom auth";
         public string Scheme => DefaultScheme;
-        public string AuthKey { get; set; }
+        public StringValues AuthKey { get; set; }
     }
 }

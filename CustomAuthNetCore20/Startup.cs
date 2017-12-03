@@ -28,8 +28,8 @@ namespace CustomAuthNetCore20
             // Call custom authentication extension method
             .AddCustomAuth(options =>
             {
-                // Configure password for authentication
-                options.AuthKey = "custom auth key"; 
+                // Configure single or multiple passwords for authentication
+                options.AuthKey = "custom auth key";
             });
 
             services.AddMvc(options =>
@@ -47,7 +47,7 @@ namespace CustomAuthNetCore20
             }
 
             // Enable authentication capabilities
-            app.UseAuthentication(); 
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

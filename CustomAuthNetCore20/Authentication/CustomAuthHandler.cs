@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -24,8 +25,8 @@ namespace CustomAuthNetCore20.Authentication
                 return Task.FromResult(AuthenticateResult.Fail("Cannot read authorization header."));
             }
 
-            // The auth key from Authorization header check against the configured one
-            if (authorization != Options.AuthKey)
+            // The auth key from Authorization header check against the configured ones
+            if (authorization.Any(key => Options.AuthKey.All(ak => ak != key)))
             {
                 return Task.FromResult(AuthenticateResult.Fail("Invalid auth key."));
             }
