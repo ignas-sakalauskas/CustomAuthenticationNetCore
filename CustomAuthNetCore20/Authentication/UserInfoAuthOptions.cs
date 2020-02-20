@@ -3,9 +3,9 @@ using Microsoft.Extensions.Primitives;
 
 namespace CustomAuthNetCore20.Authentication
 {
-    public class CustomAuthOptions : AuthenticationSchemeOptions
+    public class UserInfoAuthOptions : AuthenticationSchemeOptions
     {
-        public const string DefaultScheme = "custom auth";
+        public const string DefaultScheme = "userinfo";
         public string Scheme => DefaultScheme;
         public StringValues AuthKey { get; set; }
     }

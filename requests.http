@@ -1,2 +1,2 @@
 GET http://localhost:5000/api/values
-Authorization: custom auth key
+x-userinfo: eyJncm91cHMiOlsiRXZlcnlvbmUiLCJsb2NhbCJdLCJ1c2VyLmZ1bGxOYW1lIjoiTG9jYWwgSG9zdCIsInVzZXIuZW1haWwiOiJ1c2VyQGxvY2FsaG9zdCIsInN1YiI6InVuaXF1ZS1sb2NhbC11c2VyIn0=
