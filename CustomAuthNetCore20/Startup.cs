@@ -22,22 +22,20 @@ namespace CustomAuthNetCore20
         {
             services.AddAuthentication(options =>
             {
-                options.DefaultAuthenticateScheme = CustomAuthOptions.DefaultScheme;
-                options.DefaultChallengeScheme = CustomAuthOptions.DefaultScheme;
+                options.DefaultAuthenticateScheme = UserInfoAuthOptions.DefaultScheme;
+                options.DefaultChallengeScheme = UserInfoAuthOptions.DefaultScheme;
             })
-            .AddCustomAuth(options =>
+            .AddUserInfoAuth(options =>
             {
-                options.AuthKey = "custom auth key";
+                options.ClaimsIssuer = "https://issuer.maartenlouage.nl";
             });
 
-            services.AddControllers(options => 
+            services.AddControllers(options =>
             {
                 options.Filters.Add(new AuthorizeFilter(new AuthorizationPolicyBuilder()
                     .RequireAuthenticatedUser()
                     .Build()));
             });
-
-            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -51,7 +49,7 @@ namespace CustomAuthNetCore20
             app.UseAuthentication();
 
             app.UseRouting();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

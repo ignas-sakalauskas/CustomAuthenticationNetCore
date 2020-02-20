@@ -5,11 +5,9 @@ namespace CustomAuthNetCore20.Authentication
 {
     public static class AuthenticationBuilderExtensions
     {
-        // Custom authentication extension method
-        public static AuthenticationBuilder AddCustomAuth(this AuthenticationBuilder builder, Action<CustomAuthOptions> configureOptions)
+        public static AuthenticationBuilder AddUserInfoAuth(this AuthenticationBuilder builder, Action<UserInfoAuthOptions> configureOptions)
         {
-            // Add custom authentication scheme with custom options and custom handler
-            return builder.AddScheme<CustomAuthOptions, CustomAuthHandler>(CustomAuthOptions.DefaultScheme, configureOptions);
+            return builder.AddScheme<UserInfoAuthOptions, UserInfoAuthHandler>(UserInfoAuthOptions.DefaultScheme, configureOptions);
         }
     }
 }

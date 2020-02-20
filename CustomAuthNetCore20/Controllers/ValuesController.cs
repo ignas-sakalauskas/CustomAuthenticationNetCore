@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CustomAuthNetCore20.Controllers
@@ -6,11 +6,11 @@ namespace CustomAuthNetCore20.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult Get()
         {
-            return new[] { "value1", "value2" };
+            var claimValues = HttpContext.User.Claims.Select(c => c.Value);
+            return Ok(claimValues);
         }
     }
 }
