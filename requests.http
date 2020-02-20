@@ -1,0 +1,2 @@
+GET http://localhost:5000/api/values
+Authorization: custom auth key
