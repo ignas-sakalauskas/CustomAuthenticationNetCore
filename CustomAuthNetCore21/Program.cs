@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace CustomAuthNetCore20
+namespace CustomAuthNetCore21
 {
     public class Program
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CustomAuthNetCore20.Controllers
+namespace CustomAuthNetCore21.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller

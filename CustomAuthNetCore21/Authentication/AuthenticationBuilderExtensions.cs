@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Authentication;
 
-namespace CustomAuthNetCore20.Authentication
+namespace CustomAuthNetCore21.Authentication
 {
     public static class AuthenticationBuilderExtensions
     {

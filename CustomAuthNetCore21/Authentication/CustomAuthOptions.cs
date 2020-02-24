@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Primitives;
 
-namespace CustomAuthNetCore20.Authentication
+namespace CustomAuthNetCore21.Authentication
 {
     public class CustomAuthOptions : AuthenticationSchemeOptions
     {

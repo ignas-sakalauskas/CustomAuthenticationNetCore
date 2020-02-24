@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Net.Http.Headers;
 
-namespace CustomAuthNetCore20.Authentication
+namespace CustomAuthNetCore21.Authentication
 {
     public class CustomAuthHandler : AuthenticationHandler<CustomAuthOptions>
     {

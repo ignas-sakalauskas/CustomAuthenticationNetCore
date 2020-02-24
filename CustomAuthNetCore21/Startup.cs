@@ -1,4 +1,4 @@
-﻿using CustomAuthNetCore20.Authentication;
+﻿using CustomAuthNetCore21.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CustomAuthNetCore20
+namespace CustomAuthNetCore21
 {
     public class Startup
     {
